@@ -1,5 +1,7 @@
-
-/* Variables y constantes */
+/* social links sidebar */
+if (window.location.pathname === "/") {
+    $(".sidebar").show();
+}
 
 /* Document reload content */
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,3 +24,20 @@ const typed = new Typed('.typed', {
     loop: true,
     cursorChar: '|',
 });
+
+
+/* DownLoad CV */
+const btnDescargar = document.getElementById("btnDownload");
+btnDescargar.addEventListener("click", function() {
+  descargarArchivo("../../Portafoly/assets/Currículum_1.pdf");
+});
+
+function descargarArchivo(url) {
+    const linkDescarga = document.createElement("a");
+    linkDescarga.href = url;
+    linkDescarga.setAttribute("download", "");
+    linkDescarga.style.display = "none";
+    document.body.appendChild(linkDescarga);
+    linkDescarga.click();
+    document.body.removeChild(linkDescarga);
+}

@@ -98,4 +98,51 @@
     display: block;
   }
   
-  
+  /* sidebar social links */
+  /* En tu archivo CSS */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.sidebar {
+  display: block;
+  position: fixed;
+  top: 236px;
+  right: -1px;
+  width: 78px;
+  height: 40%;
+  background-color: #0a0909;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.social-links li {
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
