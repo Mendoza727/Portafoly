@@ -26,18 +26,16 @@ const typed = new Typed('.typed', {
 });
 
 
-/* DownLoad CV */
-const btnDescargar = document.getElementById("btnDownload");
-btnDescargar.addEventListener("click", function() {
-  descargarArchivo("../../Portafoly/assets/Currículum_1.pdf");
+/* Fetch HTMLSIDEBARLINKS PC */
+fetch("../Portafoly/pages-components/sidebarLinks.html")
+    .then(response => response.text())
+    .then( data => {
+        document.querySelector("#sidebarLinks").innerHTML = data;
 });
 
-function descargarArchivo(url) {
-    const linkDescarga = document.createElement("a");
-    linkDescarga.href = url;
-    linkDescarga.setAttribute("download", "");
-    linkDescarga.style.display = "none";
-    document.body.appendChild(linkDescarga);
-    linkDescarga.click();
-    document.body.removeChild(linkDescarga);
-}
+/* Mobile */
+fetch("../Portafoly/pages-components/sidebarMobileLinks.html")
+    .then(response => response.text())
+    .then( data => {
+        document.querySelector("#sidebarMobile").innerHTML = data;
+});
