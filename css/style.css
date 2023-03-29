@@ -118,7 +118,7 @@
 
 /* sidebar mobile */
 
-@media (min-width: 280px) and (max-width: 820.25px) {
+@media (min-width: 280px) and (max-width: 990px) {
 
   .sidebar {
     position: fixed;
@@ -141,10 +141,6 @@
     margin-top: 10%;
   }
 
-  .social-links li {
-    margin-bottom: 36px;
-  }
-
 }
 
 /* */
@@ -152,7 +148,7 @@
 
 /* sidebar css pc */
 
-@media (min-width: 780px) and (min-width: 700px) and (max-width: 2560px) {
+@media (min-width: 1000px) and (max-width: 2560px) {
 
   /* sidebar social links */
   .sidebar {

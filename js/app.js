@@ -39,3 +39,34 @@ fetch("../Portafoly/pages-components/sidebarMobileLinks.html")
     .then( data => {
         document.querySelector("#sidebarMobile").innerHTML = data;
 });
+
+
+
+/* Fetch HTML PAGE about-me */
+fetch("../Portafoly/pages-components/about-me.html")
+    .then( response => response.text() )
+    .then( data => {
+        document.querySelector('#content-about-me').innerHTML = data;
+});
+
+/* Fetch HTML PAGE skills */
+fetch("../Portafoly/pages-components/skills.html")
+    .then( response => response.text() )
+    .then( data => {
+        document.querySelector('#content-skills').innerHTML = data;
+});
+
+
+/* Fetch HTML PAGE educationsAndCertifications*/
+fetch("../Portafoly/pages-components/EducationsAndCertifications.html")
+    .then( response => response.text() )
+    .then( data => {
+        document.querySelector('#content-educationAndCertifications').innerHTML = data;
+});
+
+/* Fetch HTML PAGE experience */
+fetch("../Portafoly/pages-components/experience.html")
+    .then( response => response.text() )
+    .then( data => {
+        document.querySelector('#content-experience').innerHTML = data;
+});
